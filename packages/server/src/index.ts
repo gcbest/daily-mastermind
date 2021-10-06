@@ -2,10 +2,7 @@ import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 
-import {typeDefs} from '../graphql'
-
-console.log(typeDefs);
-
+import {typeDefs} from './graphql'
 
 const executableSchema = makeExecutableSchema({
   typeDefs,
