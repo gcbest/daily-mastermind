@@ -10,9 +10,10 @@ const executableSchema = makeExecutableSchema({
 });
 
 const app = express();
+const PORT = process.env.PORT || 4000;
+
 app.use('/graphql', graphqlHTTP({
   schema: executableSchema,
   graphiql: true,
 }));
-app.listen(4000);
-console.log('Running a GraphQL API server at http://localhost:4000/graphql');
+app.listen(PORT, () => console.log('Running a GraphQL API server at http://localhost:4000/graphql'));

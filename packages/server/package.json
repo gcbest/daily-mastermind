@@ -17,10 +17,10 @@
     "typescript": "^4.4.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc & npm run copy-schemas",
     "copy-schemas": "cpx src/**/*.graphql dist",
     "dev": "tsc -w & npm run copy-schemas & nodemon .",
-    "start": "tsc & node ."
+    "start": "tsc & npm run copy-schemas & node ."
   },
   "keywords": [],
   "author": "Godfrey Best",
